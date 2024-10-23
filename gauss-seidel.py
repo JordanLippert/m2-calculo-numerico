@@ -34,9 +34,11 @@ def make_diagonally_dominant(A, B):
 def gauss_seidel(A, B, tol=1e-3, max_iterations=100):
     # Tentar ajustar a matriz para torná-la diagonalmente dominante
     if not is_diagonally_dominant(A):
-        print("Matriz não é diagonalmente dominante. Tentando ajustar...")
+        print("Matriz não é diagonalmente dominante. Exibindo matriz original:")
+        print(A)  # Imprime a matriz original
         A, B = make_diagonally_dominant(A, B)
-        print("Matriz ajustada para ser diagonalmente dominante.")
+        print("Matriz ajustada para ser diagonalmente dominante:")
+        print(A)  # Imprime a matriz ajustada
 
     n = len(B)
     x = np.zeros_like(B)  # Inicializa o vetor x com zeros
